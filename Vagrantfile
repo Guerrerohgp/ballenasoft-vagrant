@@ -70,5 +70,8 @@ Vagrant.configure("2") do |config|
          done
 
     SHELL
+	# Mailcatcher
+    config.vm.provision "shell", inline: "/home/vagrant/.rbenv/shims/mailcatcher --http-ip=0.0.0.0", run: "always"
+
 
 end
